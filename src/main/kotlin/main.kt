@@ -16,7 +16,7 @@ fun hittaTomte(id: String, tomte: Tomte, resultLista: MutableList<String>) {
 
 fun läggTillTomte(tomte: Tomte, resultLista: MutableList<String>) {
     if (tomte.children != null) {
-        for (child in tomte.children!!) {
+        for (child in tomte.children) {
             resultLista.add(child.id)
             läggTillTomte(child, resultLista)
         }
